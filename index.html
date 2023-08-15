@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/pokeball.png" />
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/App.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src = "src/js/sort.js"></script>
+    <script type="text/javascript" src = "src/js/pokemon.js"></script>
+    <script type="text/javascript" src="src/js/search.js"></script>
+    <script type="text/javascript" src="src/js/modal.js"></script>
+    <script type="text/javascript" src="src/js/weakness.js"></script>
+    <title>PokeDex</title>
+  </head>
+  <body>
+    <div id="root">
+
+      <main>
+      
+        <div id="topBar">
+      
+          <div id="pokedexTitle">
+      
+            <img src='src/assets/pokeball.png' id="pokeballImage" />
+            <p id="title">PokeDex</p>
+
+            <p id="title">Generation:</p>
+            <select name="generation" id="generationContainer">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+
+            </select>
+            
+            <input id="search" placeholder='Search'></input>
+      
+          </div>
+      
+          <select name="sort" id="sortContainer">
+            <option value="id">By ID</option>
+            <option value="name">By Name</option>
+          </select>
+        </div>
+      
+        <div id="pokemonModal" class ="modal">
+      
+          <div class ="modal-content">
+            <span class ="close">&times;</span>
+            <span id="pokemonInfoName">001. Bulbasaur</span>
+            <div id="pokemonInfoContainer">
+              <div id="pokemonInfoLeft">
+                <img id="pokemonInfoImage" />
+      
+                <div id="pokemonInfoStatsContainer">
+                  <span class ="pokemonInfoText" id="pokemonInfoTitle">Base Stats:</span>
+                  <div id="pokemonInfoStatistics">
+                    <span class ="pokemonInfoTextStats" id="hp">HP: 10</span>
+                    <span class ="pokemonInfoTextStats" id="atk">Attack: 10</span>
+                    <span class ="pokemonInfoTextStats" id="def">Defense: 10</span>
+                    <span class ="pokemonInfoTextStats" id="satk">Special-Attack: 10</span>
+                    <span class ="pokemonInfoTextStats" id="sdef">Special-Defense: 10</span>
+                    <span class ="pokemonInfoTextStats" id="speed">Speed: 10</span>
+                  </div>
+                </div>
+      
+      
+      
+              </div>
+      
+      
+              <div id="pokemonInfoRight">
+      
+                <div id="pokemonInfo">
+      
+                  <div id="heightWeight">
+                    <span id="heightContainer"><span class ="whiteText">Height: </span><span id="height">23</span></span>
+                    <span id="weightContainer"><span class ="whiteText">Weight: </span><span id="weight">23</span></span>
+                  </div>
+      
+                  <div id="generalInfo">
+                    <span class ="pokemonInfoText"><span class ="whiteText">Abilities: </span> <span id="ability">Grass
+                        Poison</span></span>
+                  </div>
+      
+                </div>
+      
+                <div id="typeInfo">
+      
+                  <div id="weaknessContainer">
+                    <p class ="pokemonInfoText">Weakness:</p>
+                    <p class ="pokemonInfoText"><span id="weakness">Fire Steel</span></p>
+                  </div>
+      
+                  <div id="typeContainer">
+                    <p class ="pokemonInfoText">Type:</p>
+                    <p class ="pokemonInfoText"><span id="type">Grass Poison</span></p>
+                  </div>
+      
+                </div>
+      
+                <div id="buttonDiv">
+                  <button id="back">Previous</button>
+                  <button id="next">Next</button>
+                </div>
+      
+      
+              </div>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+        <div id="pokedexBody">
+      
+        </div>
+      
+        <div id="loadingDiv"></div>
+      
+        <footer>
+          Created by Jerickson Lee
+        </footer>
+      </main>
+
+
+
+    </div>
+  </body>
+</html>
