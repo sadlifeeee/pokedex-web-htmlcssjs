@@ -23,7 +23,7 @@ window.onload = async function () {
     selectedGeneration = document.querySelector('#generationContainer')
     
     var loading = document.createElement("p")
-    loading.innerHTML = "Loading Pokedex..."
+    loading.innerHTML = "Loading Pokedex... may take awhile"
     loading.id = "loading"
     document.getElementById("loadingDiv").append(loading)
 
@@ -90,6 +90,11 @@ async function changeGeneration() {
     
     document.getElementById("pokedexBody").innerHTML = ""
 
+    var loading = document.createElement("p")
+    loading.innerHTML = "Loading Pokedex... may take awhile"
+    loading.id = "loading"
+    document.getElementById("loadingDiv").append(loading)
+
     selectedGeneration = document.querySelector('#generationContainer')
 
     startPokemon = totalGenerationPokemon.get(selectedGeneration.value)[0]
@@ -101,6 +106,8 @@ async function changeGeneration() {
     }
 
     changeSort()
+
+    document.getElementById("loadingDiv").innerHTML = ""
 }
 
 function changeSort() {
